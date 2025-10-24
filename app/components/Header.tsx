@@ -4,7 +4,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card"
+} from "@radix-ui/react-hover-card"
 import Image from 'next/image'
 import {Trash} from 'lucide-react'
 import { Button } from '@/components/ui/button';
