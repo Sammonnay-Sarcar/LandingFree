@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="px-2 md:px-14">
-        <div className="fixed z-50 bg-white top-0 left-0 w-screen">
+      <body className="px-2 md:px-14 pt-36">
+        <div className="fixed z-50 bg-white top-0 left-0 w-screen px-2">
         <div className="inline-flex justify-between w-full md:px-14 box-border ">
           <span className="inline-flex gap-2  py-1">
             <Phone size={24} className="mt-auto"/>

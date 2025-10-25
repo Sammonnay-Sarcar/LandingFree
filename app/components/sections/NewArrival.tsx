@@ -1,5 +1,5 @@
 import React from 'react'
-import { NewArrivalProductCard } from './NewArrivalProductCard'
+import { NewArrivalProductCard } from '../NewArrivalProductCard'
 
 export const NewArrival = () => {
     const newArrivals = [
@@ -63,16 +63,16 @@ export const NewArrival = () => {
         ];
   return (
     <div>
-        <span className="inline-block w-full text-center text-2xl font-bold">
+        <span className="inline-block w-full text-center text-lg md:text-2xl font-bold">
             New Arrivals
         </span>
         <span className='inline-block w-full text-center'>
-            <hr className='w-24 mx-auto border-t-2 border-black'/>
+            <hr className='w-14 relative -top-2 md:w-24 mx-auto border-t-2 border-black'/>
         </span>
-        <span className="text-center inline-block w-full box-border px-32">
+        <span className="text-center inline-block w-full box-border px-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum repudiandae blanditiis fugit quas minus veniam nihil quam totam expedita? Est, inventore assumenda atque sequi nemo distinctio ad explicabo mollitia.
         </span>
-        <div className="grid h-full grid-cols-4 gap-3 mt-8  mb-16">
+        <div  className="grid h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-8  mb-16">
             {newArrivals.map((item, index) => (
                 <NewArrivalProductCard key={index} item={item}/>
             ))}

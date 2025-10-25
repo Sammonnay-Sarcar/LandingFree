@@ -13,7 +13,7 @@ export const OurBlogs = () => {
             url:"https://illustrations.popsy.co/amber/success.svg"
         },]
   return (
-    <div className='w-full inline-flex flex-col h-144'>
+    <div className='w-full inline-flex flex-col h-fit lg:h-144'>
         <div className='inline-flex justify-center'>
             <hr className='w-24 border-t-2 border-black  mt-5 mx-2'/>
             <div className='w-fit h-fit my-auto '>
@@ -21,7 +21,7 @@ export const OurBlogs = () => {
             </div>
             <hr className='w-24 border-t-2 border-black mt-5 mx-2'/>
         </div>
-        <div className='grid h-full grid-cols-3 gap-3 mt-8 px-14  mb-16 box-border '>
+        <div className='grid h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-8 px-4 md:px-14  mb-16 box-border '>
             {blogs.map((item, index) => (
                 <BlogCard key={index} item={item}/>
             ))}

@@ -32,7 +32,7 @@ export const Header = () => {
                   <User size={24} />
                 </HoverCardTrigger>
                 <HoverCardContent className="w-fit">
-                  <div className=" h-fit">
+                  <div className=" h-fit bg-white rounded-md shadow-xl p-4">
                     <ul>
                       <li className='inline-flex flex-col'>
                         <span className="text-xs">Hello,</span>
@@ -58,10 +58,10 @@ export const Header = () => {
                 <HoverCardTrigger>
                   <ShoppingCart size={24} />
                 </HoverCardTrigger>
-                <HoverCardContent className="w-72">
+                <HoverCardContent className="w-72 bg-white p-4 shadow-xl rounded-md">
                   <CartItems/>
                   <CartItems/>
-                  <Button className='w-full'>
+                  <Button className='w-full mt-4'>
                     Checkout
                   </Button>
                 </HoverCardContent>

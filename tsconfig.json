@@ -37,7 +37,7 @@
     "**/*.mts",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts"
-  ],
+, "components/ui/navigation-menu.jsx"  ],
   "exclude": [
     "node_modules"
   ]

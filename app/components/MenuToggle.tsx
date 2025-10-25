@@ -10,7 +10,7 @@ export const MenuToggle = () => {
                 Menu
                 <Menu size={24} />
               </label>
-              <nav className="peer-checked:inline-flex transition-all duration-900 hidden h-full w-2/3 absolute right-0 bg-secondary flex-col justify-center text-center font-bold gap-3 p-4">
+              <nav className="bg-white absolute z-50 peer-checked:inline-flex transition-all duration-900 hidden h-svh w-2/3 absolute right-0 bg-secondary flex-col justify-center text-center font-bold gap-3 p-4">
                 <a href="">News</a>
                 <a href="">Events</a>
                 <a href="">Our Members</a>

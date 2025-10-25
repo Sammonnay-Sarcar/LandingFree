@@ -7,21 +7,31 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import {Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-CardButton} from "@/components/ui/card";
-import {TopProducts } from './topProducts'
+  CardTitle,} from "@/components/ui/card";
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-export const NewArrivalProductCard = ({item}) => {
+type NewArrivalProduct = {
+  url: string;
+  productTitle: string;
+  productDescription: string;
+  discountedPrice: number;
+  originalPrice: number;
+};
+
+type NewArrivalProductCardProps = {
+  item: NewArrivalProduct;
+};
+
+export const NewArrivalProductCard: React.FC<NewArrivalProductCardProps> = ({item}) => {
   return (
     <Card className="h-full box-border  hover:shadow-md gap-4 cursor-pointer  shadow-xl transition-shadow duration-300">
-        <CardContent className="h-full px-2 pb-2">
+        <CardContent className= "px-0 md:px-4">
+            <div className="h-full px-0 md:px-2 pb-2">
                     <Image src={item.url}
                     alt="Product Image"
                     width={450}
@@ -43,6 +53,7 @@ export const NewArrivalProductCard = ({item}) => {
                     </Button>
                     
                 </CardFooter>
+            </div>
         </CardContent>
     </Card>
                
