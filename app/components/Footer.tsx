@@ -6,13 +6,13 @@ export const Footer = () => {
     <div className="inline-flex flex-wrap w-full h-fit pb-10">
         <div className='w-1/3 md:w-1/5 inline-flex flex-col justify-center px-4'>
             <h1 className="text-sm  md:text-2xl font-bold">Sams Cabin.</h1>
-            <span className='text-xs md:text-lg'>
-                © 2024 Sam's Cabin. All rights reserved.
+            <span className='text-xs md:text-sm'>
+                © 2024 Sam's Cabin. <br/>All rights reserved.
             </span>
         </div>
         <div className='w-2/3 md:w-3/5 grid h-full grid-cols-3 gap-5 justify-center '>
             <div className='px-0 md:px-4'>
-                <span className='font-bold text-xs md:text-md'>
+                <span className='font-bold text-md'>
                     About Us
                 </span>
                 <ul>

@@ -4,7 +4,7 @@ import { Hero } from "./components/Hero";
 import { Perks } from "./components/Perks";
 import { NewArrival } from "./components/sections/NewArrival";
 import { OurBlogs } from "./components/OurBlogs";
-import { Footer } from "./components/Footer";
+
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Perks />
       <NewArrival/>
       <OurBlogs/>
-      <Footer/>
+      
     </>
   );
 }

@@ -5,7 +5,7 @@ import React from "react";
 import { MenuToggle } from "./components/MenuToggle";
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
-
+import { Footer } from "./components/Footer";
 export const metadata: Metadata = {
   title: "Sam's Cabin",
   description: "Ahh Shit, Here We Go Again",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="px-2 md:px-14 pt-36">
+      <body className="px-2 md:px-14 pt-32">
         <div className="fixed z-50 bg-white top-0 left-0 w-screen px-2">
         <div className="inline-flex justify-between w-full md:px-14 box-border ">
           <span className="inline-flex gap-2  py-1">
@@ -37,6 +37,7 @@ export default function RootLayout({
         </div>
         </div>
         {children}
+        <Footer/>
       </body>
     </html>
   );
