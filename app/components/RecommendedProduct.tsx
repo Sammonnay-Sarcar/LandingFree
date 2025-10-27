@@ -8,7 +8,7 @@ import {Card,
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-type NewArrivalProduct = {
+type RecommendedProduct = {
   url: string;
   productTitle: string;
   productDescription: string;
@@ -16,22 +16,22 @@ type NewArrivalProduct = {
   originalPrice: number;
 };
 
-type NewArrivalProductCardProps = {
-  item: NewArrivalProduct;
+type RecommendedProductCardProps = {
+  item: RecommendedProduct;
 };
 
-export const NewArrivalProductCard: React.FC<NewArrivalProductCardProps> = ({item}) => {
+export const RecommendedProductCard: React.FC<RecommendedProductCardProps> = ({item}) => {
   return (
-    <Card className="h-full box-border  hover:shadow-md gap-4 cursor-pointer  shadow-xl transition-shadow duration-300">
-        <CardContent className= "px-0 md:px-4">
-            <div className="h-full px-0 md:px-2 pb-2">
+    <Card className="h-128 w-72 box-border  hover:shadow-md gap-4 cursor-pointer  shadow-xl transition-shadow duration-300">
+        <CardContent className= "px-0 md:px-2">
+            <div className="h-full px-0 md:px-1 pb-2">
                     <Image src={item.url}
                     alt="Product Image"
                     width={450}
                     height={100} className=""/>
                 <CardHeader className="pt-2 pb-0">
                     <CardTitle className="text-lg font-bold mt-4">{item.productTitle}</CardTitle>
-                    <CardDescription className="text-sm text-gray-500 mt-2">{item.productDescription}</CardDescription>
+                    <CardDescription className="text-sm text-gray-500 mt-2 min-h-14 h-fit">{item.productDescription}</CardDescription>
                 </CardHeader>
                 <span className="inline-flex px-6 w-full">
                     <span className="text-lg font-bold mt-4">${item.discountedPrice}</span>

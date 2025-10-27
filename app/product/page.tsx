@@ -1,11 +1,37 @@
 import React from 'react'
 import {Item} from '@/components/ui/item'
 import {Badge} from '@/components/ui/badge'
-import {ArrowLeft, Calendar, Heart, Package, Percent, Star, Truck} from "lucide-react"
+import {ArrowLeft, ArrowRight, Calendar, Heart, Package, Percent, Star, Truck, User} from "lucide-react"
 import Image from 'next/image'
 import Link from 'next/link'
+import { NewArrivalProductCard } from '../components/NewArrivalProductCard'
+import { RecommendedProductCard } from '../components/RecommendedProduct'
 
 const ProductPage = () => {
+    const products = [
+        {
+            url:"https://illustrations.popsy.co/amber/shaking-hands.svg",
+            productTitle: "Wireless Headphones",
+            productDescription: "Noise-cancelling over-ear headphones with 20h battery life",
+            originalPrice: 4999,
+            discountedPrice: 3499,
+        },
+        {
+            url:"https://illustrations.popsy.co/amber/creative-work.svg",
+            productTitle: "Smartwatch Pro",
+            productDescription: "Tracks heart rate, sleep, and steps with AMOLED display",
+            originalPrice: 8999,
+            discountedPrice: 6999,
+
+        },
+    {
+            url:"https://illustrations.popsy.co/amber/team-idea.svg",
+            productTitle: "Bluetooth Speaker",
+            productDescription: "Compact speaker with deep bass and waterproof design",
+            originalPrice: 2999,
+            discountedPrice: 1999,
+        },
+    ]
     const colours = [
         { name : "Royal Blue",shade : "#1A2A4F"},
         { name : "Orange",shade : "#F87B1B"},
@@ -27,7 +53,7 @@ const ProductPage = () => {
   return (
     <Item className="inline-flex flex-col justify-start gap-0">
     <Item className="w-full h-[34rem] gap-0 p-0" >
-        <Item className="fixed z-50 top-32  gap-1 w-screen  p-1 py-0 bg-white">
+        <Item className="fixed z-40 top-32  gap-1 w-screen  p-1 py-0 bg-white">
             <ArrowLeft size={18}/>
                 <Item className="px-0 hover:font-bold">
                     Stylish Floor Lamp
@@ -69,8 +95,8 @@ const ProductPage = () => {
             </Item>
         </Item>
     </Item>
-    <Item className="w-full inline-grid grid-cols-2 p-0 gap-0 ">
-        <Item className="w-full py-0 pr-0  pl-8">
+    <Item className="w-full inline-grid grid-cols-2 p-0 gap-2 px-8 items-start">
+        <Item className="w-full p-0 items-start flex-col justify-start">
             <Item className="bg-secondary inline-flex flex-col w-full p-4 justify-start gap-0 text-left ">
                 <Item className=" inline-flex flex-row w-full p-0 flex-nowrap justify-between">
                     <h1 className="text-4xl font-bold text-left w-4/5">Stylish Floor Lamp</h1>
@@ -117,7 +143,7 @@ const ProductPage = () => {
                 <Item className=" w-52 mt-0 flex-row gap-2">
                     {sizes.map((size,index)=>
                     <Badge key={index} variant={size.isAvailable == "true"?"default":"destructive"} className="rounded-full ">
-                        <Link href="/" className='text-md py-1 px-4  '>
+                        <Link href="" className='text-md py-1 px-4  '>
                             {size.name}
                         </Link>
                     </Badge>    )}
@@ -199,9 +225,104 @@ const ProductPage = () => {
                 </Item>
             </Item>
         </Item>
+        <Item className="p-0 w-full h-full  flex-col">
+            <Item className="bg-200 w-full p-0">
+                <Item className="flex-row justify-between p-0 px-4 w-full h-fit bg-black rounded-3xl">
+                        <Item className="p-0 w-fit ">
+                            <h1 className='text-white font-bold text-2xl'>
+                                $ 1,099
+                            </h1>
+                        </Item>
+                        <Item className=" w-fit h-fit">
+                            <Badge variant="default" className="bg-white rounded-full text-black text-lg px-6 py-2  gap-2">
+                                <Link href="/">
+                                    Buy Now
+                                </Link>
+                                <ArrowRight size={24}/>
+                            </Badge>
+                        </Item>
+                    </Item>                     
+            </Item>
+            <Item className="p-2 bg-secondary w-full h-fit">
+                <Item className="flex-row w-full justify-between p-0">
+                    <Item className="font-bold text-lg">Reviews(41)</Item>
+                    <Item className="font-bold">Read more </Item>        
+                </Item>
+                <Item className="h-fit w-full p-2 pr-20">
+                    <ReviewCard/> 
+                    <ReviewCard/> 
+      
+                </Item>
+            </Item>           
+        </Item>
+    </Item>
+    <Item className=' w-full'>
+            <Item className='w-full text-center justify-center '>
+                <h1 className='text-2xl font-bold'>More All You Needs.</h1>
+            </Item>  
+            <Item className='flex-row justify-center w-full h-full pt-0 p-4'>
+                
+                {products.map((product,index)=>
+                <Item key={index} className="p-0">
+                <RecommendedProductCard  item={product}/>
+                </Item>
+            )}
+                
+                </Item>              
     </Item>
     </Item>
   )
 }
+
+const ReviewCard = () => {
+  return (
+    <Item className="w-full p-0 gap-2  ">
+        <Item className="flex-row p-0 w-full ">
+            <User size={40} fill="#44444E" color='#44444E' className='rounded-full bg-white p-2'/>
+            <Item className="w-fit p-0 flex-col items-start gap-0">
+                <Item className="p-0 text-lg font-semibold">Sammonnay Sarcar</Item>
+                <Item className="flex-row p-0 -mt-2">
+                    <Item className="p-0">
+                        27/10/2025
+                    </Item>
+                    <Item className="h-4 p-0">
+                        <hr className='w-[1px] h-full bg-black'/>
+                    </Item>
+                    <Item className="p-0">
+                        <Star fill="#44444E" size={20} color='#44444E'/>
+                    </Item>
+                </Item>
+            </Item>
+        </Item>
+        <Item className="p-0">
+            <p className='font-medium text-sm'>
+                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora explicabo molestias corrupti libero praesentium exercitationem veritatis blanditiis veniam itaque quasi nisi animi dolores saepe, nesciunt accusantium rem cum, consectetur dolore.'
+            </p>
+        </Item>
+        <Item className="w-full flex-row p-2  gap-2">
+            <Item className=" w-24 h-24 p-0">
+                <Image src="https://illustrations.popsy.co/amber/app-launch.svg" 
+                    fill
+                    alt="Main product  image"
+                    className='aspect-square w-full h-full !relative'/>
+            </Item>
+            <Item className=" w-24 h-24 p-0">
+                <Image src="https://illustrations.popsy.co/amber/idea-launch.svg" 
+                    fill
+                    alt="Main product  image"
+                    className='aspect-square w-full h-full !relative'/>
+            </Item>
+            <Item className=" w-24 h-24 p-0">
+                <Image src="https://illustrations.popsy.co/amber/success.svg" 
+                    fill
+                    alt="Main product  image"
+                    className='aspect-square w-full h-full !relative'/>
+            </Item>
+        </Item>
+    </Item>
+  )
+}
+
+
 
 export default ProductPage

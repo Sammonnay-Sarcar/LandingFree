@@ -31,7 +31,7 @@ export const Header = () => {
                 <HoverCardTrigger>
                   <User size={24} />
                 </HoverCardTrigger>
-                <HoverCardContent className="w-fit">
+                <HoverCardContent className="w-fit z-50">
                   <div className=" h-fit bg-white rounded-md shadow-xl p-4">
                     <ul>
                       <li className='inline-flex flex-col'>
@@ -58,7 +58,7 @@ export const Header = () => {
                 <HoverCardTrigger>
                   <ShoppingCart size={24} />
                 </HoverCardTrigger>
-                <HoverCardContent className="w-72 bg-white p-4 shadow-xl rounded-md">
+                <HoverCardContent className="w-72 bg-white p-4 shadow-xl z-50 rounded-md">
                   <CartItems/>
                   <CartItems/>
                   <Button className='w-full mt-4'>
