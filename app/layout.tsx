@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { Phone, Menu, Apple, Search, User, ShoppingCart } from "lucide-react";
+import { Phone} from "lucide-react";
 import React from "react";
 import { MenuToggle } from "./components/MenuToggle";
 import { Header } from "./components/Header";

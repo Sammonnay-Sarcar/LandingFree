@@ -1,7 +1,16 @@
 import React from 'react'
 import { ProductCard } from './ProductCard'
 
-export const NavDetail = ({ categories }) => {
+type Category = {
+  heading: string;
+  items: string[];
+};
+
+type NavDetailProps = {
+  categories: Category[];
+};
+
+export const NavDetail: React.FC<NavDetailProps> = ({ categories }) => {
   return (
     <div className='inline-flex w-screen lg:w-[1200px] h-fit min-h-[500px] '>
         <div className='w-2/5  lg:w-2/3  p-4 h-[500px] overflow-y-auto '>
@@ -25,7 +34,7 @@ export const NavDetail = ({ categories }) => {
     </div>
   )
 }
- const NavSubList = ({ subCategories })=>{
+ const NavSubList: React.FC<{ subCategories: string[] }> = ({ subCategories })=>{
   return (
     <ul className=''>
       {subCategories.map((subCategory, index) => 
