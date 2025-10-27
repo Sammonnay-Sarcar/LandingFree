@@ -1,27 +1,17 @@
 import React from 'react'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import {Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-CardButton} from "@/components/ui/card";
-import {TopProducts } from './topProducts'
+  CardTitle} from "@/components/ui/card";
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export const ProductCard = () => {
   return (
     <Card  className=" box-border px-2 lg:px-4 py-2 h-fit">
-        <CardContent  className="h-full box-border p-2 pt-0 inline-flex flex-col flex-shrink box-border">
+        <CardContent  className="h-full p-2 pt-0 inline-flex flex-col flex-shrink box-border">
                     <Image src="https://illustrations.popsy.co/amber/product-launch.svg"
                     alt="Product Image"
                     width={100}

@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { Hero } from "./components/Hero";
 import { Perks } from "./components/Perks";
 import { NewArrival } from "./components/sections/NewArrival";

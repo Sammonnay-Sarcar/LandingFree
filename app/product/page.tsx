@@ -1,7 +1,6 @@
 import React from 'react'
 import {Item} from '@/components/ui/item'
 import {Badge} from '@/components/ui/badge'
-import {Button} from '@/components/ui/button'
 import {ArrowLeft, Calendar, Heart, Package, Percent, Star, Truck} from "lucide-react"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -43,7 +42,7 @@ const ProductPage = () => {
                     className='aspect-3/2 w-full h-full !relative'/>
                 </Item>
             </Item>
-            <Item className='w-1/2 h-full gap-0 pl-0 gap-1 pt-0'>
+            <Item className='w-1/2 h-full pl-0 gap-1 pt-0'>
                 <Item className='w-full h-1/2 box-border p-0 inline-flex gap-1 flex-nowrap'>
                     <Item className="w-full h-full shadow-lg hover:shadow-md rounded-md">
                          <Image src="https://illustrations.popsy.co/amber/idea-launch.svg" 
@@ -76,7 +75,7 @@ const ProductPage = () => {
                 <Item className=" inline-flex flex-row w-full p-0 flex-nowrap justify-between">
                     <h1 className="text-4xl font-bold text-left w-4/5">Stylish Floor Lamp</h1>
                     <Item className="w-1/5 h-14 p-0 justify-end">
-                     <Item className="bg-white box-border w-fit max-w-14 h-fit rounded-full max-h-14 hover:shadow-inner shadow-md hover:shadow-sm">
+                     <Item className="bg-white box-border w-fit max-w-14 h-fit rounded-full max-h-14 shadow-md hover:shadow-sm">
                         <Heart className='w-full h-full  mx-auto ' size={20}/>
                         </Item>   
                     

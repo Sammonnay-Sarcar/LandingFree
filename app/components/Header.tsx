@@ -16,7 +16,7 @@ export const Header = () => {
             <span className="inline-flex my-auto gap-1 md:gap-2">
               <Apple size={24} />
               <h1 className="inline-block md:hidden text-xs mt-1 md:mt-0 font-extrabold">SC</h1>
-              <h1 className="hidden md:inline-block text-md mt-1 md:mt-0 font-extrabold">SAM'S CABIN</h1>
+              <h1 className="hidden md:inline-block text-md mt-1 md:mt-0 font-extrabold">SAM&apos;S CABIN</h1>
             </span>
             
             <span className="inline-flex bg-secondary min-w-fit w-1/2 justify-between p-1 md:p-2 box-border rounded-md gap-2">
